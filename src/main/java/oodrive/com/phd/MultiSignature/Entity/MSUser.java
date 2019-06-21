@@ -14,6 +14,7 @@ public class MSUser {
 
 	public MSUser(SystemParameters systemParams) {
 		this.systemParams = systemParams;
+		this.generated = false;
 	}
 
 	public MSPrivateKey getMSSKey() {
@@ -43,6 +44,7 @@ public class MSUser {
 
 		msSKey = new MSPrivateKey(secret);
 		msPKey = new MSPublicKey(publicKey);
-
+		
+		generated = true;
 	}
 }
